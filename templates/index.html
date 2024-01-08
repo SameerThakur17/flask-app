@@ -10,14 +10,18 @@
 </head>
 <body>
   <div class="container ">
-  <h1 class="text-center mt-2 mb-4">Ghost Careers</h1>
+  <h1 class="text-center mt-2 mb-4">{{company}} Careers</h1>
   <img class="img-fluid" id="banner" src="static/banner.png" alt="">
   <h2 class="text-center mt-2 mb-4">About Ghost</h2>
   <p class="lead">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque diam volutpat commodo. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Odio facilisis mauris sit amet massa vitae tortor. A condimentum vitae sapien pellentesque habitant morbi tristique.
   </p>
   <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-  <p>Todo</p>
+  <div class="con tainer">
+    {%for job in jobs %}
+    {% include "jobitems.html" %}
+    {% endfor %}
+  </div>
     <div class="text-center">
     <button class="btn btn-primary btn-lg">Contact Us</button>
       <p class="mt-4">
