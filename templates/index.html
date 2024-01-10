@@ -9,25 +9,32 @@
   </head>
 </head>
 <body>
-  <div class="container ">
-  <h1 class="text-center mt-2 mb-4">{{company}} Careers</h1>
-  <img class="img-fluid" id="banner" src="static/banner.png" alt="">
+  {% include "navbar.html" %}
+  <img class="img-fluid" id="banner" src="static/banner.png" alt=""> 
+  <div class="container">
+  <!-- <h1 class="text-center mt-2 mb-4">{{company}} Careers</h1> -->
   <h2 class="text-center mt-2 mb-4">About Ghost</h2>
+    <div class="row mb-4">
+    <div class="col-md-7">
   <p class="lead">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque diam volutpat commodo. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Odio facilisis mauris sit amet massa vitae tortor. A condimentum vitae sapien pellentesque habitant morbi tristique.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec   et odio pellentesque diam volutpat commodo. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Odio facilisis mauris sit amet massa vitae tortor. A condimentum vitae sapien pellentesque habitant morbi tristique.
   </p>
+    </div>
+    <div class="d-none d-md-block col-md-5">
+      <img class="rounded" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-  4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" height="300px">
+    </div>
+      </div>
+
   <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-  <div class="con tainer">
+  <div class="container">
     {%for job in jobs %}
     {% include "jobitems.html" %}
     {% endfor %}
   </div>
     <div class="text-center">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">
-        Copyright Ghost
-      </p>
+    <a href="mailto:theghostnetwork@gmail.com?subject=Questions%20About%20The%20Job%20Opening&body=My%20Name%20%3A%20%3Cname%3E%0D%0A%0D%0AMy%20Question%3A%20%3Cquestion%3E" class="btn btn-primary btn-lg">Contact Us</a>
     </div>
+  {% include "footer.html" %}
   </div>
 </body>
 </html>
